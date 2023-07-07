@@ -126,12 +126,12 @@ const Navbar = () => {
     const[toggle,settoggle] = useState(false);
 
   return (
-    <div className="pb-6 mb-16 md:mb-0 z-10 fixed flex p-6 justify-between items-center text-white bg-black w-full h-20">
+    <div className=" p-12 whitespace-normal md:m-0 mb-16 md:p-6 md:mb-0 z-10 fixed flex justify-between items-center text-white bg-black w-full h-20">
       <div>
         <h1 className="text-4xl md:text-5xl font-bold font-serif hover:text-gray-300 duration-700">Suraj </h1>
       </div>
 
-      <ul className="hidden md:flex text-xl">
+      <ul className="hidden  md:flex text-xl">
         {arr.map(({ id, child ,href,download}) => (
           <li key={id} className="mr-8 cursor-pointer text-white font-medium hover:scale-110 duration-200 hover:text-yellow-600">
            <a href={href}
@@ -147,11 +147,11 @@ const Navbar = () => {
         }
       </ul>
       
-      <div className=" md:hidden">
+      <div className="pr-8 md:hidden">
 
         {toggle ?
-         <RiCloseLine className="absolute top-6 right-3" onClick={()=>settoggle(false)}  size={30}/>
-          :<RiMenu3Line className="absolute top-6 right-3" onClick={()=>settoggle(true)} size={30}/>
+         <RiCloseLine className="absolute top-6 right-5" onClick={()=>settoggle(false)}  size={30}/>
+          :<RiMenu3Line className="absolute top-6 right-5" onClick={()=>settoggle(true)} size={30}/>
         }
         <div className="flex flex-col justify-center  absolute top-10 right-10 bg-gray-500  w-40">
         {toggle && linkes.map(({id,child,href,download})=>(

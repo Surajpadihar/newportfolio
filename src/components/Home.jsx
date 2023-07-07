@@ -5,7 +5,7 @@ import myphoto from '../assets/suraj thakur.jpg'
 
 const Home = () => {
   return (
-    <div name="home" className='h-screen w-full  bg-gradient-to-b from-black via-black to-gray-800 text-white'>
+    <div name="home" className='pt-20 md:w-full md:pt-0 h-screen bg-gradient-to-b from-black via-black to-gray-800 text-white'>
       <div className='max-w-screen-lg mx-auto flex justify-center items-center flex-col px-4 h-full md:flex-row '>
         <div className="flex justify-center flex-col h-full ">
             <h1 className='text-4xl  newcolor sm:text-6xl font-bold newcolor ' >i'm frontend Web developer</h1>

@@ -126,9 +126,9 @@ const Navbar = () => {
     const[toggle,settoggle] = useState(false);
 
   return (
-    <div className=" p-12 whitespace-normal md:m-0 mb-16 md:p-6 md:mb-0 z-10 fixed flex justify-between items-center text-white bg-black w-full h-20">
+    <div className="p-4 whitespace-normal md:m-0 mb-16 md:p-6 md:mb-0 z-10 fixed flex justify-between items-center text-white bg-black w-full h-20">
       <div>
-        <h1 className="text-4xl md:text-5xl font-bold font-serif hover:text-gray-300 duration-700">Suraj </h1>
+        <h1 className="text-4xl md:text-5xl font-bold font-serif hover:text-gray-300 duration-700">Suraj Padihar</h1>
       </div>
 
       <ul className="hidden  md:flex text-xl">

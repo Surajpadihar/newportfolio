@@ -1,35 +1,14 @@
-
-import './App.css';
-
-
-// import {BrowserRouter, Routes ,Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-// // import Social from "./components/Social";
-import About from "./components/About";
-import Portfolio from "./components/Portfolio";
-import Technologies from "./components/Technologies";
-
-
-
+import "./App.scss";
+import Intro from "./components/Intro";
+import Portfolio from "./components/portfolio";
+import Skills from "./components/skills";
 
 function App() {
- 
-  return (
-    
-    
-    
-      <div className="">
-      <Navbar/> 
-      <Home/> 
-      <About/>
+    return <div className="h">
+       <Intro/>
+       <Skills/>
        <Portfolio/>
-      <Technologies/> 
-     
-    </div>
-     
-     
-  );
+    </div>;
 }
 
 export default App;

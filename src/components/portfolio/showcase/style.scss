@@ -1,0 +1,44 @@
+@import "../../../style-config/variable.scss";
+@import "../../../style-config/mixins.scss";
+
+.showcase{
+    
+    margin-top: 70px;
+    color: $white;
+    .showcase-item{
+         
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 25px;
+        
+        .s-item{
+            
+            img{
+                border-radius: 10px;
+                &:hover{
+                 
+                    transform: scale(1.1);
+                    transition-duration: 500ms;
+                }
+            }
+            .inside-item{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                // background-color: blue;
+                .btn{
+                    margin: 15px 15px 0px 15px;
+                    @include typography(18px,400,18px);
+                    
+                    &:hover{
+                        
+                        transform: scale(1.1);
+                        transition-duration: 500ms;
+                        color: blue;
+                    }
+                }
+            }
+            
+        }
+    }
+}

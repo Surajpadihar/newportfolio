@@ -66,6 +66,21 @@ const tech =[
     
 
 ]
+
+const DownloadCv =()=>{
+    fetch('SUraj.pdf').then(response => {
+        response.blob().then(blob => {
+            // Creating new object of PDF file
+            const fileURL = window.URL.createObjectURL(blob);
+            // Setting various property values
+            let alink = document.createElement('a');
+            alink.href = fileURL;
+            alink.download = 'Resume.pdf';
+            alink.click();
+        })
+    })
+     
+}
 const Skills = () => {
   return (
     <div>
@@ -88,8 +103,10 @@ const Skills = () => {
             </div>
             <div className="right-col">
                 <h2>Skills</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio quasi animi, eaque modi voluptas maiores, deserunt consequatur nihil non assumenda labore eius doloribus, accusantium similique ratione amet? Obcaecati, odio fugit.</p>
-                <CTA  text="Download CV" icon={<AiOutlineCloudDownload/>} ></CTA>
+                <p>i'm proficient in HTML,CSS,JavaScript and Reactjs i have also done C and C++ , I have mastered data structure and algorithms as well.<br/> 
+                i  also have a some knowladge of python and Java.
+                </p>
+                <CTA  text="Download CV" icon={<AiOutlineCloudDownload/>} action={DownloadCv} ></CTA>
             </div>
           </div>
       </Section>

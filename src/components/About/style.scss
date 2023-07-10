@@ -1,0 +1,25 @@
+@import "../../style-config/variable.scss";
+@import "../../style-config/mixins.scss";
+
+.about-content{
+    color: $white;
+    width: 100%;
+    display: flex;
+    margin-top: 60px;
+    justify-content: center; 
+    flex-direction: column;
+     
+    @include small-screen{
+      
+        width: 70%;
+       
+    }
+    p{
+       @include typography(18px,400,25px);
+       color: rgb(184, 162, 162);
+       margin-left: 20px;
+       @include small-screen{
+        margin-left: unset;
+       }
+    }
+}

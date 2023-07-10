@@ -7,12 +7,19 @@
     color: $white;
     .showcase-item{
          
-        display: grid;
-        grid-template-columns: auto auto auto;
-        gap: 25px;
-        
+        display: flex;
+        flex-direction: column;
+       
+        @include small-screen{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 25px;
+        }
         .s-item{
-            
+            width: 100%;
+            @include small-screen{
+                width: 100%;
+            }
             img{
                 border-radius: 10px;
                 &:hover{
@@ -24,12 +31,26 @@
             .inside-item{
                 width: 100%;
                 display: flex;
-                justify-content: space-between;
-                // background-color: blue;
+                // background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+                border-bottom: 1px solid white;
+                border-radius: 10px;
+                margin-bottom: 18px;
+                // background-color:transparent;
+                // justify-content: space-between;
+                @include small-screen{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                }
                 .btn{
-                    margin: 15px 15px 0px 15px;
-                    @include typography(18px,400,18px);
                     
+                    @include typography(17px,400,18px);
+                    margin: 10px 0px 11px 20px;
+                    padding: 20px 20px 13px 18px;
+                    @include small-screen{
+                        margin: 15px 15px 0px 15px;
+                        @include typography(18px,400,18px);
+                    }
                     &:hover{
                         
                         transform: scale(1.1);

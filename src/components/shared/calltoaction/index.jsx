@@ -3,12 +3,11 @@ import "./style.scss";
 import Arrow from "../arrow";
 
 
-
-const CTA = ({ text, icon ,nav,download}) => {
+const CTA = ({ text, icon ,nav,action}) => {
     return (
-        <div className={`call-to-action ${nav?"call-to-action-nav":""}`}>
+        <div onClick={action} className={`call-to-action ${nav?"call-to-action-nav":""}`}>
             <span className="text">{text}</span>
-            {download && <a href="/SUraj.pdf" download={true}></a>}
+            
             {icon ? <div className="icon">{icon}</div> : <Arrow />}
         </div>
     );
